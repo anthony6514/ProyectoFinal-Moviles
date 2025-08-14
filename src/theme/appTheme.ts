@@ -1,7 +1,112 @@
 import { StyleSheet } from "react-native";
-import { ACCENT_COLOR, PRIMARY_COLOR, SECONDARY_COLOR, TERTIARY_COLOR, TEXT_COLOR_LIGHT } from "../commons/constants";
-
+import { ACCENT_COLOR, BORDER_COLOR, DIVIDER_COLOR, FOOTER_NOTE_COLOR, FOOTER_TEXT_COLOR, INPUT_BACKGROUND, PRIMARY_COLOR, SECONDARY_COLOR, TERTIARY_COLOR, TEXT_COLOR_DARK, TEXT_COLOR_LIGHT } from "../commons/constants";
+ 
 export const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        justifyContent: 'center',
+        padding: 24,
+        backgroundColor: PRIMARY_COLOR,
+    },
+    backgroundGradient: {
+        ...StyleSheet.absoluteFillObject,
+        backgroundColor: PRIMARY_COLOR,
+        opacity: 0.8,
+    },
+    title: {
+        fontSize: 28,
+        fontWeight: 'bold',
+        marginBottom: 32,
+        textAlign: 'center',
+        color: SECONDARY_COLOR,
+    },
+    input: {
+        height: 50,
+        borderWidth: 1,
+        borderColor: BORDER_COLOR,
+        borderRadius: 8,
+        paddingHorizontal: 16,
+        marginBottom: 16,
+        backgroundColor: INPUT_BACKGROUND,
+        fontSize: 16,
+        color: TEXT_COLOR_LIGHT,
+    },
+    button: {
+        backgroundColor: TERTIARY_COLOR,
+        padding: 16,
+        borderRadius: 8,
+        alignItems: 'center',
+        marginTop: 16,
+        shadowColor: TERTIARY_COLOR,
+        shadowOffset: { width: 0, height: 2 },
+        shadowOpacity: 0.3,
+        shadowRadius: 4,
+        elevation: 3,
+    },
+    buttonText: {
+        color: TEXT_COLOR_DARK,
+        fontWeight: '600',
+        fontSize: 16,
+        textTransform: 'uppercase',
+        letterSpacing: 1,
+    },
+    link: {
+        marginTop: 24,
+        alignItems: 'center',
+    },
+    linkText: {
+        color: ACCENT_COLOR,
+        fontSize: 14,
+        fontWeight: '500',
+    },
+    divider: {
+        height: 1,
+        backgroundColor: DIVIDER_COLOR,
+        marginVertical: 24,
+    },
+    footerText: {
+        textAlign: 'center',
+        color: FOOTER_TEXT_COLOR,
+        fontSize: 14,
+    },
+    footerNote: {
+        textAlign: 'center',
+        color: FOOTER_NOTE_COLOR,
+        fontSize: 13,
+        marginTop: 8,
+        lineHeight: 18,
+        letterSpacing: 0.1,
+        fontStyle: 'italic',
+    },
+    logo: {
+        width: 120,
+        height: 120,
+        alignSelf: 'center',
+        marginBottom: 30,
+        borderRadius: 60,
+    },
+    passwordContainer: {
+        position: 'relative',
+        justifyContent: 'center',
+        marginBottom: 16,
+    },
+    passwordIcon: {
+        position: 'absolute',
+        right: 15,
+        top: 13,
+    },
+    homeContainer: {
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: PRIMARY_COLOR,
+    },
+    homeText: {
+        fontSize: 24,
+        fontWeight: 'bold',
+        color: SECONDARY_COLOR,
+    },
+ 
     titleWelcome: {
         fontSize: 17,
         fontWeight: 'bold',
@@ -185,68 +290,5 @@ export const styles = StyleSheet.create({
         color: SECONDARY_COLOR,
         fontWeight: 'bold',
         fontSize: 16,
-    },
-    // Estilos para la pantalla de inicio de sesión y registro
-    container: {
-        flex: 1,
-        backgroundColor: PRIMARY_COLOR,
-        justifyContent: 'center',
-        paddingHorizontal: 20,
-    },
-    title: {
-        fontSize: 32,
-        fontWeight: 'bold',
-        color: SECONDARY_COLOR,
-        textAlign: 'center',
-        marginBottom: 20,
-    },
-    logo: {
-        width: 150,
-        height: 150,
-        alignSelf: 'center',
-        marginBottom: 20,
-    },
-    input: {
-        backgroundColor: SECONDARY_COLOR,
-        paddingHorizontal: 15,
-        paddingVertical: 10,
-        borderRadius: 5,
-        marginBottom: 10,
-        color: PRIMARY_COLOR,
-    },
-    passwordContainer: {
-        flexDirection: 'row',
-        alignItems: 'center',
-        backgroundColor: SECONDARY_COLOR,
-        borderRadius: 5,
-        marginBottom: 10,
-    },
-    passwordIcon: {
-        position: 'absolute',
-        right: 15,
-    },
-    button: {
-        backgroundColor: ACCENT_COLOR,
-        padding: 15,
-        borderRadius: 5,
-        alignItems: 'center',
-        marginTop: 10,
-    },
-    buttonText: {
-        color: SECONDARY_COLOR,
-        fontWeight: 'bold',
-        fontSize: 18,
-    },
-    link: {
-        marginTop: 15,
-        alignItems: 'center',
-    },
-    linkText: {
-        color: ACCENT_COLOR,
-        fontWeight: 'bold',
-    },
-    footerText: {
-        color: SECONDARY_COLOR,
-        fontSize: 14,
     },
 });
